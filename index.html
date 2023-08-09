@@ -29,7 +29,7 @@
     <hr>
 
     <h2>Question 4 - Print Day Name using Switch Case</h2>
-    <input type="number" id="daynum">
+    <input type="number" id="daynum" required>
     <p>Day: <span id="dayname"></span></p>
     <button id="ques4">Click Me</button>
 
@@ -37,18 +37,63 @@
     <hr>
 
     <h2>Question 5 - Test whether a date is weekend</h2>
-    <input type="text" id="inpdate">
+    <input type="text" id="inpdate" required>
     <button id="ques5">Click Me</button>
 
 
     <hr>
 
-    <h2>Question 6 - Volume of a cylinder</h2>
+    <h2>Question 6 - Volume of a cylinder V = pi * r<sup>2</sup> * h</h2>
     <label>Enter the Radius of Cylinder</label>
-    <input type="number" id="radius"> <br><br>
+    <input type="number" id="radius" required> <br><br>
     <label>Enter the Height of Cylinder</label>
-    <input type="number" id="height"> <br><br>
+    <input type="number" id="height" required> <br><br>
+    <p>V = <span id="volcylin"></span></p>
     <button id="ques6">Click Me</button>
+
+
+    <hr>
+
+    <h2>Question 7 - Sorting Number in Acending Order</h2>
+    <p>Original Array: [40, 100, 1, 5, 25, 10]</p>
+    <p>Sort Array: <span id="arrsort"></span></p>
+    <button id="ques7">Click Me</button>
+
+
+    <hr>
+
+    <h2>Question 8 - Modify array return 0 in place of -1</h2>
+    <p>Original Array: [21, -1, 3, 50, -2, 10]</p>
+    <p>Modify Array: <span id="arrmodify"></span></p>
+    <button id="ques8">Click Me</button>
+
+
+    <hr>
+
+    <h2>Question 9 - Sort Out Array by title</h2>
+    <p>Original Array: [ 
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 }, 
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }, 
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book od The Hinger Games', libraryID: 3245 } 
+    ];</p>
+    <p>Sorted Array: <span id="titlesort"></span></p>
+    <button id="ques9">Click Me</button>
+
+
+
+    <hr>
+
+    <h2>Question 10 - Find out the book by name</h2>
+    <p>Original Array: [ 
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 }, 
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }, 
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book od The Hinger Games', libraryID: 3245 } 
+    ];</p>
+    <label>Enter Author Name here to find Book</label> <input type="text" id="searchbook">
+    <p>Book Name: <span id="bookfind"></span></p>
+    <button id="ques10">Click Me</button>
+
+
 
 
     

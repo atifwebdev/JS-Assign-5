@@ -99,7 +99,71 @@ document.querySelector("#ques6").addEventListener("click", () => {
         height: getHeight,
     }
     let volume = volumeObj.pie * volumeObj.radius * volumeObj.radius * volumeObj.height;
-    console.log(volumeObj);
-    console.log(volume);
+    document.querySelector("#volcylin").innerHTML = volume.toFixed(4);
     console.log(volume.toFixed(4));
  });
+
+
+ // 7
+document.querySelector("#ques7").addEventListener("click", () => {
+    let numbers = [40, 100, 1, 5, 25, 10];
+     let num = numbers.sort((a, b) => a - b);
+     document.querySelector("#arrsort").innerHTML = num;
+     console.log(num);
+  });
+
+
+// 8
+document.querySelector("#ques8").addEventListener("click", () => {
+    let numbers = [21, -1, 3, 50, -2, 10];
+    let modifyArr =  numbers.find((nums) => nums < 0);
+    numbers.filter( (val, i) => {
+        if(modifyArr == val){
+            numbers[i] = 0;
+            document.querySelector("#arrmodify").innerHTML = numbers;
+            console.log(numbers);
+        }
+    });
+  });
+
+
+// 9
+document.querySelector("#ques9").addEventListener("click", () => {
+    let library = [ 
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 }, 
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }, 
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book od The Hinger Games', libraryID: 3245 } 
+    ];
+    let sortArr = library.sort( (a, b) => {
+        let aTitle = a.title.toUpperCase();
+        let bTitle = b.title.toUpperCase();
+        if (aTitle < bTitle) {
+            return -1;
+        }
+        if (bTitle > bTitle) {
+            return 1;
+        }
+        return 0;
+    } );
+    sortArr.forEach( (val) => {
+        document.querySelector("#titlesort").innerHTML += JSON.stringify(val);
+    });
+    console.log(sortArr);
+  });
+
+
+// 10
+document.querySelector("#ques10").addEventListener("click", () => {
+    let library = [ 
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 }, 
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }, 
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book od The Hinger Games', libraryID: 3245 } 
+    ];
+    let inpVal = document.querySelector("#searchbook").value.toLowerCase();
+    library.map( (val) => {
+        if(inpVal == val.author.toLowerCase()){
+        console.log(val.title);
+        document.querySelector("#bookfind").innerHTML = val.title;
+        }
+    });
+  });
